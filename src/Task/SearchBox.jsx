@@ -1,4 +1,11 @@
-export default function SearchBox() {
+import { useState } from "react";
+export default function SearchBox({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function handleSearch(e) {
+    e.preventDefault();
+    onSearch(searchTerm);
+  }
   return (
     <form>
       <div className="flex">
@@ -8,9 +15,12 @@ export default function SearchBox() {
             id="search-dropdown"
             className="z-20 block w-full bg-gray-800 px-4 py-2 pr-10 focus:outline-none"
             placeholder="Search Task"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             required
           />
           <button
+            onClick={handleSearch}
             type="submit"
             className="absolute right-2 top-0 h-full rounded-e-lg text-white md:right-4"
           >

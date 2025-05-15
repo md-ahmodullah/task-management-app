@@ -22,6 +22,10 @@
 - ### React 19
 - ### Tailwind CSS v4
 
+## Component Diagram or Data Flow:
+
+<img src='https://i.ibb.co/SwK7Fb9t/component-structure-tasker-app.png' alt='component-strucure-tasker-app' />
+
 ## How To Run Your Machine?
 
 - ### Clone the repository.
